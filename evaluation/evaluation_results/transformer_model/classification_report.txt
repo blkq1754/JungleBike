@@ -1,0 +1,135 @@
+                                           precision    recall  f1-score   support
+
+                      Accessoires Casques       1.00      1.00      1.00         2
+               Adaptateurs frein à disque       0.00      0.00      0.00         0
+                                 Antivols       1.00      1.00      1.00         2
+Attaches rapides et Connecteurs de chaîne       0.00      0.00      0.00         0
+                         Axes de pédalier       0.00      0.00      0.00         0
+                             Axes de roue       1.00      1.00      1.00         1
+                                 Bandeaux       0.00      0.00      0.00         0
+                                Batteries       0.00      0.00      0.00         0
+                         Blocages de roue       0.00      0.00      0.00         0
+                       Bouchons de cintre       0.00      0.00      0.00         0
+                                   Boyaux       0.00      0.00      0.00         0
+                      Boîtier de pédalier       1.00      1.00      1.00         2
+                     Bâches pour remorque       0.00      0.00      0.00         0
+                                Béquilles       1.00      1.00      1.00         1
+                                   Cadres       0.00      0.00      0.00         0
+                             Cale-pédales       0.00      0.00      0.00         0
+                                 Capteurs       0.00      0.00      0.00         0
+               Cartouches patins de frein       0.00      0.00      0.00         0
+                             Casques vélo       1.00      1.00      1.00        11
+                               Casquettes       1.00      1.00      1.00         1
+                                Cassettes       1.00      1.00      1.00         2
+                           Chambres à air       1.00      1.00      1.00         3
+                    Chargeurs de batterie       0.00      0.00      0.00         0
+                              Chaussettes       1.00      1.00      1.00         4
+                          Chaussures vélo       1.00      1.00      1.00         6
+                       Chaîne et courroie       1.00      1.00      1.00         1
+                             Clés à rayon       0.00      0.00      0.00         0
+        Colliers de serrage tige de selle       0.00      0.00      0.00         0
+                             Combinaisons       0.00      0.00      0.00         0
+                    Commandes de vitesses       1.00      1.00      1.00         1
+                        Corps de cassette       1.00      1.00      1.00         1
+                                Coudières       1.00      1.00      1.00         1
+                        Couvre chaussures       1.00      1.00      1.00         1
+                            Couvre selles       0.00      0.00      0.00         0
+                                Cuissards       1.00      1.00      1.00         7
+                     Cuvettes de pédalier       0.00      0.00      0.00         0
+                                   Câbles       1.00      1.00      1.00         1
+                         Disques de frein       1.00      1.00      1.00         1
+                         Démonte cassette       0.00      0.00      0.00         0
+                          Démonte cuvette       0.00      0.00      0.00         0
+                             Démonte pneu       0.00      0.00      0.00         0
+                       Démonte roue libre       0.00      0.00      0.00         0
+                       Dérailleur arrière       0.50      1.00      0.67         1
+                         Dérailleur avant       0.00      0.00      0.00         1
+                    Echarpes et cache-cou       0.00      0.00      0.00         0
+                 Eclairages avant-arrière       1.00      1.00      1.00         2
+                                   Ecrous       1.00      1.00      1.00         1
+                         Embouts de gaine       0.00      0.00      0.00         0
+                 Etriers de frein v-brake       0.00      0.00      0.00         0
+                       Flacon de peinture       0.00      0.00      0.00         0
+                           Fonds de jante       1.00      1.00      1.00         1
+                            Fourches vélo       1.00      1.00      1.00         4
+                   Frein à disque complet       1.00      1.00      1.00         1
+                   Frein à patins complet       0.00      0.00      0.00         0
+           GPS Compteurs vélos et montres       0.00      0.00      0.00         0
+                                   Gaines       1.00      1.00      1.00         1
+                     Galets de dérailleur       0.00      0.00      0.00         0
+                                    Gants       1.00      1.00      1.00         9
+                               Garde-boue       1.00      1.00      1.00         2
+                             Genouillères       1.00      1.00      1.00         1
+                        Gilet de sécurité       1.00      1.00      1.00         1
+                        Gourdes et bidons       1.00      1.00      1.00         2
+                             Graisse vélo       0.00      0.00      0.00         0
+                           Groupe complet       0.00      0.00      0.00         0
+                             Guide chaîne       0.00      0.00      0.00         0
+                       Guidons et cintres       1.00      1.00      1.00         2
+                          Housses de sacs       0.00      0.00      0.00         0
+                          Housses de vélo       0.00      0.00      0.00         0
+             Huile et graisse pour chaîne       0.00      0.00      0.00         0
+                                Jambières       1.00      1.00      1.00         1
+                                   Jantes       1.00      1.00      1.00         1
+                         Jeu de direction       1.00      1.00      1.00         1
+                     Kit câbles et gaines       0.00      0.00      0.00         0
+                            Kits d'outils       0.00      0.00      0.00         0
+                         Leviers de frein       1.00      1.00      1.00         1
+                        Liquide préventif       0.00      0.00      0.00         0
+                              Lubrifiants       0.00      0.00      0.00         0
+                      Lunettes et Masques       1.00      1.00      1.00         2
+                                 Maillots       1.00      1.00      1.00        22
+                               Manchettes       0.00      0.00      0.00         0
+                                 Manchons       0.00      0.00      0.00         0
+                               Manivelles       1.00      1.00      1.00         1
+                            Merchandising       0.00      0.00      0.00         0
+                                   Moyeux       1.00      1.00      1.00         3
+                                Nutrition       1.00      1.00      1.00         1
+                       Paniers et Caisses       1.00      1.00      1.00         1
+                              Pantalon XX       1.00      1.00      1.00         1
+                    Pantalons et leggings       1.00      1.00      1.00         3
+                     Pattes de dérailleur       1.00      1.00      1.00         1
+                                  Pignons       1.00      1.00      1.00         1
+                                    Piles       0.00      0.00      0.00         0
+                      Plaquettes de frein       1.00      1.00      1.00         3
+                                  Plateau       1.00      1.00      1.00         9
+                                    Pneus       1.00      1.00      1.00        10
+                                 Poignées       1.00      1.00      1.00         2
+                            Pompes à main       0.00      0.00      0.00         0
+                            Pompes à pied       0.00      0.00      0.00         0
+                             Porte-bagage       1.00      1.00      1.00         1
+            Porte-gourdes et porte-bidons       1.00      1.00      1.00         1
+                             Portes-vélos       0.00      0.00      0.00         0
+                                 Potences       1.00      1.00      1.00         3
+                       Protections cadres       0.00      0.00      0.00         0
+      Protections téléphones et compteurs       0.00      0.00      0.00         0
+                                  Pédales       1.00      1.00      1.00         2
+                         Pédalier complet       1.00      1.00      1.00         3
+                                   Rayons       1.00      1.00      1.00         3
+                                Rondelles       0.00      0.00      0.00         0
+                          Roues complètes       1.00      1.00      1.00         5
+                             Roues libres       1.00      1.00      1.00         1
+              Roulements jeu de direction       0.00      0.00      0.00         0
+                     Rubans et guidolines       1.00      1.00      1.00         2
+                             Rétroviseurs       1.00      1.00      1.00         3
+                       Sacoches latérales       0.00      0.00      0.00         0
+                 Sacoches selle et guidon       1.00      1.00      1.00         1
+                               Sacs à dos       1.00      1.00      1.00         1
+                                   Selles       1.00      1.00      1.00         4
+                                   Shorts       1.00      1.00      1.00         3
+         Sièges porte-bébés avant/arrière       1.00      1.00      1.00         1
+                      Sonnettes et klaxon       1.00      1.00      1.00         2
+                           Sous-vêtements       1.00      1.00      1.00         1
+                  Stickers réfléchissants       0.00      0.00      0.00         0
+         Supports téléphones et compteurs       0.00      0.00      0.00         0
+              Suspensions et amortisseurs       1.00      1.00      1.00         2
+                        Tournevis et clés       1.00      1.00      1.00         1
+                                  Tshirts       1.00      1.00      1.00         3
+                               VTT et VTC       1.00      1.00      1.00         1
+                         Valves complètes       1.00      1.00      1.00         1
+                     Vestes et coupe-vent       1.00      1.00      1.00        13
+                           Vélos de ville       0.00      0.00      0.00         0
+
+                                 accuracy                           0.99       200
+                                macro avg       0.56      0.57      0.56       200
+                             weighted avg       0.99      0.99      0.99       200

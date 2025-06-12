@@ -1,0 +1,80 @@
+                                  precision    recall  f1-score   support
+
+             Accessoires Casques       1.00      1.00      1.00         2
+                        Antivols       1.00      1.00      1.00         2
+                    Axes de roue       1.00      1.00      1.00         1
+             Boîtier de pédalier       1.00      1.00      1.00         2
+                       Béquilles       1.00      1.00      1.00         1
+                    Casques vélo       1.00      1.00      1.00        11
+                      Casquettes       1.00      1.00      1.00         1
+                       Cassettes       1.00      1.00      1.00         2
+                  Chambres à air       1.00      1.00      1.00         3
+                     Chaussettes       1.00      0.75      0.86         4
+                 Chaussures vélo       1.00      1.00      1.00         6
+              Chaîne et courroie       1.00      1.00      1.00         1
+           Commandes de vitesses       1.00      1.00      1.00         1
+               Corps de cassette       1.00      1.00      1.00         1
+                       Coudières       0.00      0.00      0.00         1
+               Couvre chaussures       1.00      1.00      1.00         1
+                       Cuissards       1.00      1.00      1.00         7
+                          Câbles       1.00      1.00      1.00         1
+                Disques de frein       1.00      1.00      1.00         1
+              Dérailleur arrière       1.00      1.00      1.00         1
+                Dérailleur avant       1.00      1.00      1.00         1
+        Eclairages avant-arrière       1.00      1.00      1.00         2
+                          Ecrous       1.00      1.00      1.00         1
+                  Fonds de jante       1.00      1.00      1.00         1
+                   Fourches vélo       1.00      1.00      1.00         4
+          Frein à disque complet       1.00      1.00      1.00         1
+                          Gaines       1.00      1.00      1.00         1
+                           Gants       1.00      1.00      1.00         9
+                      Garde-boue       1.00      1.00      1.00         2
+                    Genouillères       0.50      1.00      0.67         1
+               Gilet de sécurité       1.00      1.00      1.00         1
+               Gourdes et bidons       1.00      1.00      1.00         2
+              Guidons et cintres       1.00      1.00      1.00         2
+                       Jambières       0.00      0.00      0.00         1
+                          Jantes       1.00      1.00      1.00         1
+                Jeu de direction       1.00      1.00      1.00         1
+                Leviers de frein       1.00      1.00      1.00         1
+             Lunettes et Masques       1.00      1.00      1.00         2
+                        Maillots       1.00      1.00      1.00        22
+                      Manivelles       1.00      1.00      1.00         1
+                          Moyeux       1.00      1.00      1.00         3
+                       Nutrition       1.00      1.00      1.00         1
+              Paniers et Caisses       1.00      1.00      1.00         1
+                     Pantalon XX       1.00      1.00      1.00         1
+           Pantalons et leggings       1.00      1.00      1.00         3
+            Pattes de dérailleur       1.00      1.00      1.00         1
+                         Pignons       1.00      1.00      1.00         1
+             Plaquettes de frein       1.00      1.00      1.00         3
+                         Plateau       1.00      1.00      1.00         9
+                           Pneus       1.00      1.00      1.00        10
+                        Poignées       1.00      1.00      1.00         2
+                    Porte-bagage       1.00      1.00      1.00         1
+   Porte-gourdes et porte-bidons       1.00      1.00      1.00         1
+                        Potences       1.00      1.00      1.00         3
+                         Pédales       1.00      1.00      1.00         2
+                Pédalier complet       1.00      1.00      1.00         3
+                          Rayons       1.00      1.00      1.00         3
+                 Roues complètes       1.00      1.00      1.00         5
+                    Roues libres       1.00      1.00      1.00         1
+            Rubans et guidolines       1.00      1.00      1.00         2
+                    Rétroviseurs       1.00      1.00      1.00         3
+        Sacoches selle et guidon       1.00      1.00      1.00         1
+                      Sacs à dos       1.00      1.00      1.00         1
+                          Selles       1.00      1.00      1.00         4
+                          Shorts       1.00      1.00      1.00         3
+Sièges porte-bébés avant/arrière       1.00      1.00      1.00         1
+             Sonnettes et klaxon       1.00      1.00      1.00         2
+                  Sous-vêtements       1.00      1.00      1.00         1
+     Suspensions et amortisseurs       1.00      1.00      1.00         2
+               Tournevis et clés       1.00      1.00      1.00         1
+                         Tshirts       1.00      1.00      1.00         3
+                      VTT et VTC       1.00      1.00      1.00         1
+                Valves complètes       1.00      1.00      1.00         1
+            Vestes et coupe-vent       0.87      1.00      0.93        13
+
+                        accuracy                           0.98       200
+                       macro avg       0.96      0.97      0.97       200
+                    weighted avg       0.98      0.98      0.98       200

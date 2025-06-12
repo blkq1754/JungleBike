@@ -1,0 +1,30 @@
+
+# Environnements virtuels
+.venv/
+venv/
+ENV/
+
+# Fichiers de cache Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Fichiers de données (généralement trop gros pour Git)
+# On s'attend à ce que l'utilisateur les génère avec les scripts.
+data/
+
+# Fichiers de configuration IDE
+.vscode/
+.idea/
+*.swp
+
+# Fichiers temporaires de Poetry
+.poetry-cache/
+
+# Fichiers macOS
+.DS_Store
+
+# Fichiers de sortie locaux
+classic_predictions.csv
+predictions.csv
+input.csv
