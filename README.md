@@ -12,7 +12,7 @@ Solution et  Test Technique – Data Scientist chez Jungle Bike  : classificatio
 ## Tableau Comparatif des Performances 
 
 | Métrique | Modèle Classique (TF-IDF + LogReg) | Modèle Transformer (CamemBERT) | 
-| :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | 
 | **Précision | 98.0% | **99.0%** | 
 | **F1-Score  | 98.0% | **99.0%** | 
 | **Temps d'Entraînement** | **~ 5 minute** | ~ 3 heures (sur GPU) |  
