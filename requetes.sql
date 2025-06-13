@@ -27,8 +27,6 @@ ORDER BY
 
 
 --  2. Top clients Assurance Vie
--- jointures entre les trois tables.calculez la moyenne et le nombre de transactions >3
-
 SELECT
   c.client_id,
   c.nom,
@@ -46,7 +44,7 @@ WHERE
 GROUP BY
   c.client_id, c.nom
 HAVING
-  COUNT(t.transaction_id) >= 3   -- 3 achats ou plus.
+  COUNT(t.transaction_id) >= 3   
 ORDER BY
   depense_moyenne DESC
 LIMIT 10;
