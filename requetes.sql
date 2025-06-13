@@ -7,7 +7,7 @@
 */
 
 --  1. Dépenses mensuelles par client 
-DerniereDate AS (
+WITH DerniereDate AS (
   SELECT MAX(date) AS max_date FROM transactions
 )
 SELECT
