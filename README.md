@@ -4,7 +4,7 @@
 
 Solution et  Test Technique – Data Scientist chez Jungle Bike  : classification de produits de vélo à partir de texte. 
 
-* **Démo en Ligne :** [Lien vers l'application Gradio sur Hugging Face Spaces](https://huggingface.co/spaces/belkacemsaad/demo_JungleBike)
+* **Démo en Ligne :** [Hugging Face Spaces](https://huggingface.co/spaces/belkacemsaad/demo_JungleBike)
 * **Auteur :** Belkacem SAAD
 
 ---
