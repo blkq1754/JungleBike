@@ -11,7 +11,7 @@ Solution et  Test Technique – Data Scientist chez Jungle Bike  : classificatio
 
 ## Tableau Comparatif des Performances 
 
-| Métrique | Modèle Classique (TF-IDF + LogReg) | Modèle Transformer (CamemBERT) | Commentaire |
+| Métrique | Modèle Classique (TF-IDF + LogReg) | Modèle Transformer (CamemBERT) | 
 | :--- | :--- | :--- | :--- |
 | **Précision | 98.0% | **99.0%** | 
 | **F1-Score  | 98.0% | **99.0%** | 
@@ -21,26 +21,26 @@ Solution et  Test Technique – Data Scientist chez Jungle Bike  : classificatio
 
 ---
 
-## 🗂️ Structure du Projet
+##  Structure du Projet
 
 Le projet est organisé de manière modulaire pour une meilleure clarté et maintenabilité.
 
 ```
 .
-├── classic_ml/               # Pipeline du modèle classique (TF-IDF + LogReg)
+├── classic_ml/               # Pipeline du modèle TF-IDF + LogReg
 │   ├── __init__.py
 │   ├── config.py
 │   ├── data.py
 │   ├── model.py
 │   ├── predict.py
 │   └── train.py
-├── data/                       # Données (non versionnées par Git)
-├── evaluation/                 # Scripts et résultats d'évaluation
+├── data/                       # (non versionnées par Git)
+├── evaluation/                 # Evaluation
 │   ├── classic_model_results/
 │   ├── transformer_model_results/
 │   ├── evaluate_classic.py
 │   └── evaluate_transformer.py
-├── models/                     # Modèles entraînés
+├── models/                     # Modèles 
 │   ├── classic_model.joblib
 │   ├── product_classifier.onnx
 │   └── dataset_target_map.json
@@ -50,13 +50,13 @@ Le projet est organisé de manière modulaire pour une meilleure clarté et main
 │   ├── preprocess.py
 │   ├── predict.py
 │   └── train.py
-├── src/                        # Code source partagé (modèle Transformer, pré-traitement)
+├── src/                        
 │   ├── __init__.py
 │   └── ...
 ├── tests/                      # Tests unitaires
 │   ├── __init__.py
 │   └── test_*.py
-├── app.py                      # Application de démo Gradio
+├── app.py                      # app Gradio
 ├── pyproject.toml              # Fichier de configuration Poetry
 └── README.md                   # Ce document
 ```
@@ -67,24 +67,22 @@ Le projet est organisé de manière modulaire pour une meilleure clarté et main
 
 Ce guide détaille comment installer l'environnement et exécuter chaque script du projet.
 
-### 1. Installation
+###  Installation
 
 Le projet utilise **Poetry** pour la gestion de l'environnement et des dépendances.
 
 ```bash
 # 1. Cloner le dépôt
-git clone [https://github.com/blkq1754/Jungle-Bike.git](https://github.com/blkq1754/Jungle-Bike.git)
+git clone https://github.com/blkq1754/Jungle-Bike.git
 cd Jungle-Bike
 
 # 2. Installer les dépendances
 poetry install
 ```
 
-### 2. Workflow Complet
+###  Workflow
 
-Le workflow est conçu pour être modulaire. Voici comment utiliser chaque script :
-
-#### Étape A : Tester l'Environnement (Optionnel)
+#### Tester l'Environnement
 
 Ce script valide que la préparation des données fonctionne comme prévu.
 
@@ -92,16 +90,15 @@ Ce script valide que la préparation des données fonctionne comme prévu.
 poetry run pytest
 ```
 
-#### Étape B : Pré-traitement des Données pour le Modèle Transformer
+#### Étape B : Pré-traitement dataset pour le Modèle Transformer
 
 Ce script prépare et tokenize les données, nécessaire avant d'entraîner le modèle Transformer.
 
 ```bash
-# Exécuté depuis la racine du projet
 poetry run python -m scripts.preprocess
 ```
 
-#### Étape C : Entraîner les Modèles (Optionnel)
+####  Entraînement des Modèles (Optionnel)
 
 Les modèles étant déjà fournis, cette étape est optionnelle.
 
@@ -109,12 +106,12 @@ Les modèles étant déjà fournis, cette étape est optionnelle.
     ```bash
     poetry run python -m classic_ml.train
     ```
-* **Entraîner le Modèle Transformer (CamemBERT) :**
+* **Entraîner le Modèle CamemBERT (fine tuning) :**
     ```bash
     poetry run python -m scripts.train
     ```
 
-#### Étape D : Évaluer les Modèles
+#### Évaluation
 
 Ces scripts génèrent les rapports de performance et les matrices de confusion dans le dossier `evaluation/`.
 
@@ -127,26 +124,21 @@ Ces scripts génèrent les rapports de performance et les matrices de confusion 
     poetry run python -m evaluation.evaluate_transformer
     ```
 
-#### Étape E : Lancer la Démonstration Interactive
+#### Lancer l'app gradio
 
-Ce script lance une interface web locale pour tester les modèles.
 ```bash
 poetry run python app.py
 ```
-Ouvrez l'URL fournie (ex: `http://127.0.0.1:7860`) dans votre navigateur.
 
 ---
 
-## 밟 Démarche Technique et Décisions Clés
+##  Démarche Technique 
 
 ### 1. Préparation du Dataset
 
-* **Problème :** Incohérence des labels et distribution très déséquilibrée des catégories ("longue traîne").
-* **Décision 1 :** Utiliser une source de vérité unique (le référentiel de catégories) pour garantir la fiabilité des labels.
-* **Décision 2 :** Filtrer les catégories ayant un support inférieur à 10 échantillons.
-    * **Justification :** Il est statistiquement non pertinent d'entraîner un modèle sur des classes avec si peu d'exemples. Cela stabilise l'apprentissage et donne des métriques plus réalistes.
-* **Décision 3 :** Intégrer la `brand` aux features textuelles (`product_name_decli`, `summary`, `description`).
-    * **Justification :** La marque contient un signal sémantique fort qui peut aider à désambiguïser certains produits.
+* **Problème :** Incohérence des labels et distribution très déséquilibrée des catégories => Utiliser une source de vérité unique (le référentiel de catégories) pour garantir la fiabilité des labels.
+*  Filtrer les catégories ayant un support inférieur à 50 échantillons.: Il est snon pertinent d'entraîner un modèle sur des classes avec si peu d'exemples. 
+*  Les features textuelles :  (`product_name_decli`, `summary`, `description`,`brand` :  'brand' un bien remplit dans le dataset et peut aider à identifier certaines catégories.
 
 ### 2. Choix des Modèles
 
