@@ -90,7 +90,7 @@ Ce script valide que la préparation des données fonctionne comme prévu.
 poetry run pytest
 ```
 
-#### Étape B : Pré-traitement dataset pour le Modèle Transformer
+#### Pré-traitement dataset pour le Modèle Transformer
 
 Ce script prépare et tokenize les données, nécessaire avant d'entraîner le modèle Transformer.
 
@@ -98,7 +98,7 @@ Ce script prépare et tokenize les données, nécessaire avant d'entraîner le m
 poetry run python -m scripts.preprocess
 ```
 
-####  Entraînement des Modèles (Optionnel)
+####  Entraînement des Modèles
 
 Les modèles étant déjà fournis, cette étape est optionnelle.
 
@@ -137,31 +137,23 @@ poetry run python app.py
 ### 1. Préparation du Dataset
 
 * **Problème :** Incohérence des labels et distribution très déséquilibrée des catégories => Utiliser une source de vérité unique (le référentiel de catégories) pour garantir la fiabilité des labels.
-*  Filtrer les catégories ayant un support inférieur à 50 échantillons.: Il est snon pertinent d'entraîner un modèle sur des classes avec si peu d'exemples. 
+*  Retirer les catégories avec moins de 50 produit : Il est snon pertinent d'entraîner un modèle sur des classes avec si peu d'exemples. 
 *  Les features textuelles :  (`product_name_decli`, `summary`, `description`,`brand` :  'brand' un bien remplit dans le dataset et peut aider à identifier certaines catégories.
 
 ### 2. Choix des Modèles
 
-* **Approche 1 : Baseline Classique (TF-IDF + Régression Logistique)**
-    * **Choix :** Un pipeline `scikit-learn` avec un pré-traitement de texte avancé (lemmatisation via `spaCy`) et un classifieur linéaire.
-    * **Justification :** Permet d'établir une performance de référence solide de manière rapide et peu coûteuse. C'est un excellent candidat pour une mise en production rapide où la vitesse et la simplicité sont prioritaires.
-* **Approche 2 : Deep Learning (Fine-tuning de CamemBERT)**
-    * **Choix :** Fine-tuning d'un modèle Transformer pré-entraîné, spécialisé pour le français.
-    * **Justification :** Vise la performance de pointe en exploitant la capacité du modèle à comprendre le contexte et la sémantique du texte, ce qui est particulièrement utile pour les cas ambigus et les catégories rares.
+* **Approche 1 : TF-IDF + Régression Logistique 
+    * Pré-traitement avec  `spaCy` 
 
-### 3. Évaluation et Comparaison
+* **Approche 2 : Fine-tuning de CamemBERT (spécialisé en français).
+.
 
-* **Méthodologie :** Un jeu d'évaluation de 200 produits a été créé via un **échantillonnage stratifié** pour une comparaison équitable des deux modèles.
-* **Résultats :**
-    * Le **modèle classique** a atteint une performance remarquable de **98% de précision**, mais a montré des faiblesses sur les classes les plus rares.
-    * Le **modèle Transformer**, ré-entraîné avec la `brand`, a atteint **99% de précision** et a prouvé sa supériorité en classant correctement des catégories où le modèle classique échouait.
-* **Conclusion :** Bien que le modèle Transformer soit techniquement supérieur, le modèle classique représente une alternative très compétitive, offrant un excellent compromis entre performance et coût. Le choix final dépendrait des contraintes du projet (besoin de précision maximale vs. besoin de rapidité et de simplicité).
+
 
 ---
 
-## 🔮 Pistes d'Amélioration Futures
+## Amélioration
 
-* **Analyse d'Erreurs :** Utiliser la matrice de confusion pour analyser en profondeur les erreurs du Transformer et comprendre les confusions résiduelles.
-* **Hyperparameter Tuning :** Utiliser des librairies comme `Optuna` ou `Ray Tune` pour optimiser les hyperparamètres des deux modèles et potentiellement gagner les derniers points de performance.
-* **Cross-Validation :** Pour le modèle classique (qui est rapide), mettre en place une validation croisée (k-fold) pour obtenir une estimation encore plus robuste de sa performance.
-* **Déploiement à l'échelle :** Pour une application à fort trafic, déployer le modèle optimisé (`.onnx`) via un serveur d'inférence dédié (ex: NVIDIA Triton) pour maximiser le débit.
+*  Utiliser la matrice de confusion pour analyser en profondeur les erreurs .
+*  les Hyperparameter: Utiliser `Optuna` pour optimiser les hyperparamètres des deux modèles.
+*  Pour le modèle classique , tester une validation croisée (k-fold) .
