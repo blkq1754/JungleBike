@@ -8,12 +8,10 @@ import json
 import torch.nn.functional as F
 import torch
 from tqdm import tqdm
-import tempfile # NOUVEAU : Import pour gérer les fichiers temporaires
+import tempfile 
 import os
 
-# --- CONFIGURATION ---
 CONFIG = {
-    # !! VÉRIFIEZ BIEN QUE CES NOMS DE FICHIERS SONT CORRECTS !!
     "onnx_model_path": Path("models/product_classifier.onnx"),
     "target_map_path": Path("models/dataset_target_map.json"),
     "model_name": "camembert-base",
@@ -21,7 +19,6 @@ CONFIG = {
     "batch_size": 32
 }
 
-# --- CHARGEMENT DES ARTEFACTS ---
 print("Chargement du modèle, du tokenizer et du mapping...")
 
 try:
@@ -42,7 +39,6 @@ except Exception as e:
     print(f"ERREUR : Impossible de charger le modèle ONNX depuis {CONFIG['onnx_model_path']}. Détails : {e}")
     exit()
 
-# --- FONCTIONS LOGIQUES ---
 
 def prepare_text_feature(df):
     text_cols = ['product_name_decli', 'brand', 'summary', 'description']
@@ -82,7 +78,7 @@ def predict_csv(uploaded_file):
         return None, "Veuillez charger un fichier CSV."
 
     try:
-        # Gradio fournit un chemin temporaire pour le fichier uploadé
+        # chemin temporaire pour le fichier uploadé
         df = pd.read_csv(uploaded_file.name)
     except Exception as e:
         return None, f"Erreur lors de la lecture du fichier : {e}"
@@ -111,17 +107,12 @@ def predict_csv(uploaded_file):
     df['confidence_score'] = all_confidences
     df = df.drop(columns=['text_feature'])
     
-    # --- CORRECTION DE LA GESTION DU FICHIER DE SORTIE ---
-    # On utilise tempfile pour créer un fichier de sortie compatible tous systèmes
     with tempfile.NamedTemporaryFile(delete=False, mode='w+', suffix='.csv', encoding='utf-8-sig') as tmp_file:
         df.to_csv(tmp_file.name, index=False)
-        # On retourne le chemin du fichier temporaire créé
         return tmp_file.name, "Prédictions terminées avec succès."
 
-# --- CRÉATION DE L'INTERFACE GRADIO ---
 with gr.Blocks(title="Classifieur de Produits Vélo", theme=gr.themes.Soft()) as iface:
     gr.Markdown("# 🚴‍♂️ Classifieur de Catégories de Produits Vélo")
-    gr.Markdown("Utilisez cette interface pour prédire la catégorie de produits de vélo, soit interactivement, soit en traitant un fichier CSV complet.")
 
     with gr.Tabs():
         with gr.TabItem("Prédiction Interactive"):
@@ -154,7 +145,5 @@ with gr.Blocks(title="Classifieur de Produits Vélo", theme=gr.themes.Soft()) as
         outputs=[file_output, status_text]
     )
 
-
-# --- LANCEMENT DE L'APPLICATION ---
 if __name__ == "__main__":
     iface.launch()
