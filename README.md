@@ -2,9 +2,7 @@
 
 ## Introduction
 
-Ce projet implémente un pipeline complet pour la classification de produits techniques de vélo à partir de leurs informations textuelles. L'objectif était non seulement de construire un modèle performant, mais surtout d'évaluer et de comparer deux approches distinctes : une solution de **Machine Learning classique** (rapide et efficace) et une solution de **Deep Learning de pointe** (basée sur un modèle Transformer).
-
-Le projet met l'accent sur la robustesse, la reproductibilité et les bonnes pratiques d'ingénierie logicielle, incluant la gestion de l'environnement, les tests unitaires, l'optimisation des modèles et la création d'une interface de démonstration interactive.
+Solution et  Test Technique – Data Scientist chez Jungle Bike  : classification de produits de vélo à partir de texte. 
 
 * **Démo en Ligne :** [Lien vers l'application Gradio sur Hugging Face Spaces](https://huggingface.co/spaces/belkacemsaad/demo_JungleBike)
 * **Auteur :** Saad Belkacem
@@ -15,12 +13,11 @@ Le projet met l'accent sur la robustesse, la reproductibilité et les bonnes pra
 
 | Métrique | Modèle Classique (TF-IDF + LogReg) | Modèle Transformer (CamemBERT) | Commentaire |
 | :--- | :--- | :--- | :--- |
-| **Précision (Accuracy)** | 98.0% | **99.0%** | Le Transformer est légèrement supérieur. |
-| **F1-Score (Pondéré)** | 98.0% | **99.0%** | Confirme la meilleure performance globale du Transformer. |
-| **Robustesse (classes rares)** | Faible (plusieurs échecs) | **Élevée** | Le Transformer gère beaucoup mieux les cas rares. |
-| **Temps d'Entraînement** | **~ 1 minute** | ~ 2-3 heures (sur GPU) | Le modèle classique est des ordres de grandeur plus rapide à entraîner. |
-| **Vitesse d'Inférence (CPU)** | **~ 11 IPS** | Lente | Le modèle classique est le choix évident pour un déploiement CPU. |
-| **Complexité & Maintenance**| **Faible** | Élevée | Le pipeline scikit-learn est beaucoup plus simple à maintenir. |
+| **Précision | 98.0% | **99.0%** | 
+| **F1-Score  | 98.0% | **99.0%** | 
+| **Temps d'Entraînement** | **~ 5 minute** | ~ 3 heures (sur GPU) |  
+| **Vitesse d'Inférence (CPU)** | **~ 11 IPS** | Lente | 
+
 
 ---
 
